@@ -9,7 +9,7 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
     }
 
 
-    function symbol() external view override(ERC20, IExerciceSolution) returns (string memory){
+    function symbol() public view override(ERC20, IExerciceSolution) returns (string memory){
         
     }
     
