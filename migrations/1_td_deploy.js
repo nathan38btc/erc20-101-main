@@ -3,6 +3,7 @@ const Str = require('@supercharge/strings')
 
 var TDErc20 = artifacts.require("ERC20TD.sol");
 var evaluator = artifacts.require("Evaluator.sol");
+var montokenerc20 = this.artifacts.require("MonTokenERC20.sol");
 
 
 module.exports = (deployer, network, accounts) => {
@@ -10,13 +11,15 @@ module.exports = (deployer, network, accounts) => {
         await deployTDToken(deployer, network, accounts); 
         await deployEvaluator(deployer, network, accounts); 
         await setPermissionsAndRandomValues(deployer, network, accounts); 
-        // await deployRecap(deployer, network, accounts); 
+        await deployRecap(deployer, network, accounts); 
+
 		console.log("Exercice 1 :");
 		await Exercice1(deployer,network,accounts);
-		console.log("Exercice 2 :");
-		await Exercice2(deployer,network,accounts);
-		console.log("Exercice 3")
-		await Exercice3(deployer,network,accounts);
+		
+		// console.log("Exercice 2 :");
+		// await Exercice2(deployer,network,accounts);
+		// console.log("Exercice 3")
+		// await Exercice3(deployer,network,accounts);
 		await myPoints(deployer,network,accounts);
     });
 };
@@ -68,7 +71,7 @@ async function Exercice1(deployer,network,accounts) {
 	// console.log("Supply = " + await Evaluator.readSupply("0xE2d95eDa8e9b71D8B7748c86210dBe5A55b7C279"))
 	const tic = await Evaluator.readTicker("0xE2d95eDa8e9b71D8B7748c86210dBe5A55b7C279")
 	const sup = await Evaluator.readSupply("0xE2d95eDa8e9b71D8B7748c86210dBe5A55b7C279")
-	Montoken = await TDErc20.new(tic,tic,sup)
+	Montoken = await montokenerc20.new(tic,tic,sup)
 	await Evaluator.submitExercice(Montoken.address)
 
 }
