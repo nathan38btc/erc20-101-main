@@ -15,11 +15,16 @@ module.exports = (deployer, network, accounts) => {
 
 		console.log("Exercice 1 :");
 		await Exercice1(deployer,network,accounts);
-		
-		// console.log("Exercice 2 :");
-		// await Exercice2(deployer,network,accounts);
-		// console.log("Exercice 3")
-		// await Exercice3(deployer,network,accounts);
+
+		console.log("Exercice 2 :");
+		await Exercice2(deployer,network,accounts);
+
+		console.log("Exercice 3")
+		await Exercice3(deployer,network,accounts);
+
+		console.log("Exercice 4")
+		await Exercice4(deployer,network,accounts);
+
 		await myPoints(deployer,network,accounts);
     });
 };
@@ -91,6 +96,12 @@ async function Exercice3(deployer,network,accounts){
 }
 
 
+//##############################################################################################################
+
+async function Exercice4(deployer,network,accounts){
+	await Evaluator.ex4_testBuyToken()
+
+}
 
 
 // truffle run verify ERC20TD@0x09f14a40Fd672B5B056FF8b5c343498452CAC4b2 --network goerli

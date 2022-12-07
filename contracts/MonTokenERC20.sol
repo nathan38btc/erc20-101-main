@@ -10,14 +10,18 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
 
 
     function symbol() public view override(ERC20, IExerciceSolution) returns (string memory){
-        
+        return ERC20.symbol();
     }
     
   function getToken() external override returns (bool){
+    _mint(msg.sender,100000);
+    return true;
+
 
   }
 
   function buyToken() external payable override returns (bool){
+    
 
   }
 
