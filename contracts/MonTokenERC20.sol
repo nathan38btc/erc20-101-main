@@ -14,14 +14,27 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
     }
     
   function getToken() external override returns (bool){
+
+    uint256 before_balance = balanceOf(msg.sender);
+
     _mint(msg.sender,100000);
-    return true;
 
+    uint256 after_balance = balanceOf(msg.sender);
 
+    return before_balance < after_balance;
   }
 
   function buyToken() external payable override returns (bool){
-    
+
+    uint256 palier = 0.00001 ether;
+
+    require(msg.value > palier , "pas assez d'eth envoyer, min 1 token");
+
+    uint256 before_balance = balanceOf(msg.sender);
+    _mint(msg.sender , SafeMath.mul(100000,msg.value));
+    uint256 after_balance = balanceOf(msg.sender);
+
+    return after_balance > before_balance;
 
   }
 
