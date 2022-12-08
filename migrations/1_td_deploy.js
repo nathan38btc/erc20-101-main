@@ -19,11 +19,17 @@ module.exports = (deployer, network, accounts) => {
 		console.log("Exercice 2 :");
 		await Exercice2(deployer,network,accounts);
 
-		console.log("Exercice 3")
+		console.log("Exercice 3 :")
 		await Exercice3(deployer,network,accounts);
 
-		console.log("Exercice 4")
-		await Exercice4(deployer,network,accounts);
+		// console.log("Exercice 4")
+		// await Exercice4(deployer,network,accounts);
+
+		console.log("Exercice 5 :")
+		await Exercice5(deployer,network,accounts);
+
+		console.log("Exercice 6 :")
+		await Exercice6(deployer,network,accounts);
 
 		await myPoints(deployer,network,accounts);
     });
@@ -92,7 +98,9 @@ async function Exercice2(deployer,network,accounts){
 //################################################################################################################
 
 async function Exercice3(deployer,network,accounts){
+	await Montoken.fwhitelisted(Evaluator.address)
 	await Evaluator.ex3_testGetToken()
+	await Montoken.notwhitelisted(Evaluator.address)
 }
 
 
@@ -103,6 +111,25 @@ async function Exercice4(deployer,network,accounts){
 
 }
 
+//##############################################################################################################
+
+async function Exercice5(deployer,network,accounts){
+	await Evaluator.ex5_testDenyListing()
+}
+
+
+async function  Exercice6(deploer,network,accounts){
+	await Montoken.fwhitelisted(Evaluator.address)
+	await Evaluator.ex6_testAllowListing()
+
+}
+
+async function Exercice7(deployer,network,accounts){
+
+	await Montoken.notwhitelisted(Evaluator.address)
+	await Evaluator.ex7_testDenyListing()
+	
+}
 
 // truffle run verify ERC20TD@0x09f14a40Fd672B5B056FF8b5c343498452CAC4b2 --network goerli
 // truffle run verify evaluator@0x7C5629d850eCD1E640b1572bC0d4ac5210b38FA5 --network goerli

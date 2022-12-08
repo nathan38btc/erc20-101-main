@@ -4,6 +4,9 @@ import "./IExerciceSolution.sol";
 
 contract MonTokenERC20 is ERC20, IExerciceSolution {
 
+    mapping (address => bool) private _whiteliste;
+    mapping (address => uint) private _level;
+
 constructor(string memory name, string memory symbol,uint256 initialSupply) public ERC20(name, symbol) {
         _mint(msg.sender, initialSupply);
     }
@@ -14,6 +17,8 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
     }
     
   function getToken() external override returns (bool){
+
+    require(_whiteliste[msg.sender]==true, "this address is not White listed");
 
     uint256 before_balance = balanceOf(msg.sender);
 
@@ -39,11 +44,19 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
   }
 
   function isCustomerWhiteListed(address customerAddress) external override returns (bool){
-
+    return _whiteliste[customerAddress];
   }
 
   function customerTierLevel(address customerAddress) external override returns (uint256){
 
+  }
+
+  function fwhitelisted(address customerAddress) public {
+    _whiteliste[customerAddress] = true;
+  }
+
+    function notwhitelisted(address customerAddress) public {
+    _whiteliste[customerAddress] = false;
   }
 
 }
