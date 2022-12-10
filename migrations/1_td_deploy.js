@@ -22,14 +22,14 @@ module.exports = (deployer, network, accounts) => {
 		console.log("Exercice 3 :")
 		await Exercice3(deployer,network,accounts);
 
-		// console.log("Exercice 4")
-		// await Exercice4(deployer,network,accounts);
+		console.log("Exercice 4")
+		await Exercice4(deployer,network,accounts);
 
-		console.log("Exercice 5 :")
-		await Exercice5(deployer,network,accounts);
+		// console.log("Exercice 5 :")
+		// await Exercice5(deployer,network,accounts);
 
-		console.log("Exercice 6 :")
-		await Exercice6(deployer,network,accounts);
+		// console.log("Exercice 6 :")
+		// await Exercice6(deployer,network,accounts);
 
 		await myPoints(deployer,network,accounts);
     });
@@ -107,6 +107,8 @@ async function Exercice3(deployer,network,accounts){
 //##############################################################################################################
 
 async function Exercice4(deployer,network,accounts){
+
+	await accounts[0]// send eth to the contract for its payments
 	await Evaluator.ex4_testBuyToken()
 
 }
@@ -128,7 +130,7 @@ async function Exercice7(deployer,network,accounts){
 
 	await Montoken.notwhitelisted(Evaluator.address)
 	await Evaluator.ex7_testDenyListing()
-	
+
 }
 
 // truffle run verify ERC20TD@0x09f14a40Fd672B5B056FF8b5c343498452CAC4b2 --network goerli

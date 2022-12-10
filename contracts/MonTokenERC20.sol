@@ -27,7 +27,7 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
     uint256 after_balance = balanceOf(msg.sender);
 
     return before_balance < after_balance;
-  }
+  } 
 
   function buyToken() external payable override returns (bool){
 
@@ -36,7 +36,8 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
     require(msg.value > palier , "pas assez d'eth envoyer, min 1 token");
 
     uint256 before_balance = balanceOf(msg.sender);
-    _mint(msg.sender , SafeMath.mul(100000,msg.value));
+    uint256 val = msg.value;
+    _mint(msg.sender , val.mul(100000));
     uint256 after_balance = balanceOf(msg.sender);
 
     return after_balance > before_balance;
