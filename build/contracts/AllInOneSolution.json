@@ -1,0 +1,517 @@
+{
+  "contractName": "AllInOneSolution",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "evaluator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "tdtoken",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "completeWorkshop",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"evaluator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tdtoken\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"completeWorkshop\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/AllInOneSolution.sol\":\"AllInOneSolution\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/AllInOneSolution.sol\":{\"keccak256\":\"0xb77b78d0888334a083b1751977c429901a020096eb6f59250ea2d4661eb37805\",\"urls\":[\"bzz-raw://dee42f6ef32808780846e838c0ff5852aeef57a1fffc2e5acae52aee756d099d\",\"dweb:/ipfs/Qmax5imuiwQsS1cdhGV8jrcSGgn82ujpBaszFoyXodRJBm\"]},\"project:/contracts/IAllInOneSolution.sol\":{\"keccak256\":\"0xf33e39909fe576a98dee591f1e2b437d4b6615db5540248cab28e05aeba989d4\",\"urls\":[\"bzz-raw://610a0ecc0ecd57354d5a95fd58ac8454e64be90b4d6c77d0af68f1a6d3d50a09\",\"dweb:/ipfs/QmWw1xeud3zxoTbKBSMGWjRgJXFCRWCiu668bn63zFFoif\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506040516100c93803806100c983398181016040526040811015603157600080fd5b8101908080519060200190929190805190602001909291905050505050606d8061005c6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806359b4726c14602d575b600080fd5b60336035565b005b56fea2646970667358221220c362f97b95e6b66978f7bc0cc7d532e87b18a28872686f93d61039224793c93364736f6c63430006020033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806359b4726c14602d575b600080fd5b60336035565b005b56fea2646970667358221220c362f97b95e6b66978f7bc0cc7d532e87b18a28872686f93d61039224793c93364736f6c63430006020033",
+  "sourceMap": "62:205:4:-:0;;;125:66;8:9:-1;5:2;;;30:1;27;20:12;5:2;125:66:4;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;125:66:4;;;;;;;;;;;;;;;;;;;;;;;;;;;62:205;;;;;;",
+  "deployedSourceMap": "62:205:4:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:205:4;;;;;;;;;;;;;;;;;;;199:65;;;:::i;:::-;;;:::o",
+  "source": "pragma solidity ^0.6.0;\r\nimport \"./IAllInOneSolution.sol\";\r\n\r\ncontract AllInOneSolution is IAllInOneSolution{\r\n\r\n    \r\n\r\n    constructor(address evaluator,address tdtoken) public {\r\n\r\n\r\n    }\r\n\r\n    function completeWorkshop() external override{\r\n        \r\n\r\n    }\r\n}",
+  "sourcePath": "C:\\users\\nathan\\desktop\\td solidity\\erc20-101-main\\contracts\\AllInOneSolution.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/AllInOneSolution.sol",
+    "exportedSymbols": {
+      "AllInOneSolution": [
+        935
+      ]
+    },
+    "id": 936,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 918,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "project:/contracts/IAllInOneSolution.sol",
+        "file": "./IAllInOneSolution.sol",
+        "id": 919,
+        "nodeType": "ImportDirective",
+        "scope": 936,
+        "sourceUnit": 2384,
+        "src": "25:33:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 920,
+              "name": "IAllInOneSolution",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2383,
+              "src": "91:17:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IAllInOneSolution_$2383",
+                "typeString": "contract IAllInOneSolution"
+              }
+            },
+            "id": 921,
+            "nodeType": "InheritanceSpecifier",
+            "src": "91:17:4"
+          }
+        ],
+        "contractDependencies": [
+          2383
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 935,
+        "linearizedBaseContracts": [
+          935,
+          2383
+        ],
+        "name": "AllInOneSolution",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 928,
+              "nodeType": "Block",
+              "src": "179:12:4",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 929,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 923,
+                  "name": "evaluator",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 929,
+                  "src": "137:17:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 922,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "137:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 925,
+                  "name": "tdtoken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 929,
+                  "src": "155:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 924,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "155:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "136:35:4"
+            },
+            "returnParameters": {
+              "id": 927,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "179:0:4"
+            },
+            "scope": 935,
+            "src": "125:66:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              2382
+            ],
+            "body": {
+              "id": 933,
+              "nodeType": "Block",
+              "src": "244:20:4",
+              "statements": []
+            },
+            "documentation": null,
+            "functionSelector": "59b4726c",
+            "id": 934,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "completeWorkshop",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 931,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "236:8:4"
+            },
+            "parameters": {
+              "id": 930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "224:2:4"
+            },
+            "returnParameters": {
+              "id": 932,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "244:0:4"
+            },
+            "scope": 935,
+            "src": "199:65:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 936,
+        "src": "62:205:4"
+      }
+    ],
+    "src": "0:267:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/AllInOneSolution.sol",
+      "exportedSymbols": {
+        "AllInOneSolution": [
+          935
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".0"
+          ]
+        },
+        "id": 918,
+        "name": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2384,
+          "absolutePath": "project:/contracts/IAllInOneSolution.sol",
+          "file": "./IAllInOneSolution.sol",
+          "scope": 936,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 919,
+        "name": "ImportDirective",
+        "src": "25:33:4"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "contractDependencies": [
+            2383
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            935,
+            2383
+          ],
+          "name": "AllInOneSolution",
+          "scope": 936
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IAllInOneSolution",
+                  "referencedDeclaration": 2383,
+                  "type": "contract IAllInOneSolution"
+                },
+                "id": 920,
+                "name": "UserDefinedTypeName",
+                "src": "91:17:4"
+              }
+            ],
+            "id": 921,
+            "name": "InheritanceSpecifier",
+            "src": "91:17:4"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 935,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "evaluator",
+                      "overrides": null,
+                      "scope": 929,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 922,
+                        "name": "ElementaryTypeName",
+                        "src": "137:7:4"
+                      }
+                    ],
+                    "id": 923,
+                    "name": "VariableDeclaration",
+                    "src": "137:17:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tdtoken",
+                      "overrides": null,
+                      "scope": 929,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 924,
+                        "name": "ElementaryTypeName",
+                        "src": "155:7:4"
+                      }
+                    ],
+                    "id": 925,
+                    "name": "VariableDeclaration",
+                    "src": "155:15:4"
+                  }
+                ],
+                "id": 926,
+                "name": "ParameterList",
+                "src": "136:35:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 927,
+                "name": "ParameterList",
+                "src": "179:0:4"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 928,
+                "name": "Block",
+                "src": "179:12:4"
+              }
+            ],
+            "id": 929,
+            "name": "FunctionDefinition",
+            "src": "125:66:4"
+          },
+          {
+            "attributes": {
+              "baseFunctions": [
+                2382
+              ],
+              "documentation": null,
+              "functionSelector": "59b4726c",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "completeWorkshop",
+              "scope": 935,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "overrides": [
+                    null
+                  ]
+                },
+                "id": 931,
+                "name": "OverrideSpecifier",
+                "src": "236:8:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 930,
+                "name": "ParameterList",
+                "src": "224:2:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 932,
+                "name": "ParameterList",
+                "src": "244:0:4"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 933,
+                "name": "Block",
+                "src": "244:20:4"
+              }
+            ],
+            "id": 934,
+            "name": "FunctionDefinition",
+            "src": "199:65:4"
+          }
+        ],
+        "id": 935,
+        "name": "ContractDefinition",
+        "src": "62:205:4"
+      }
+    ],
+    "id": 936,
+    "name": "SourceUnit",
+    "src": "0:267:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2022-12-11T22:57:05.338Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
