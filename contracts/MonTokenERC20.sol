@@ -9,6 +9,7 @@ contract MonTokenERC20 is ERC20, IExerciceSolution {
 
 constructor(string memory name, string memory symbol,uint256 initialSupply) public ERC20(name, symbol) {
         _mint(msg.sender, initialSupply);
+        
     }
 
 
@@ -31,13 +32,26 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
 
   function buyToken() external payable override returns (bool){
 
+
     uint256 palier = 0.00001 ether;
+
+    require(_whiteliste[msg.sender]==true);
+    require(_level[msg.sender] != 0);
 
     require(msg.value > palier , "pas assez d'eth envoyer, min 1 token");
 
+
     uint256 before_balance = balanceOf(msg.sender);
     uint256 val = msg.value;
-    _mint(msg.sender , val.mul(100000));
+
+    // the minted amount depend on the _level of the user
+    if(_level[msg.sender]==1){
+         _mint(msg.sender , val.mul(100000));
+    }
+    if(_level[msg.sender]==2){
+        _mint(msg.sender,2*val.mul(100000));
+    }
+
     uint256 after_balance = balanceOf(msg.sender);
 
     return after_balance > before_balance;
@@ -49,15 +63,15 @@ constructor(string memory name, string memory symbol,uint256 initialSupply) publ
   }
 
   function customerTierLevel(address customerAddress) external override returns (uint256){
-
+    return _level[customerAddress];
   }
 
-  function fwhitelisted(address customerAddress) public {
-    _whiteliste[customerAddress] = true;
+  function setwhitelisted(address customerAddress, bool x) public {
+    _whiteliste[customerAddress] = x;
   }
 
-    function notwhitelisted(address customerAddress) public {
-    _whiteliste[customerAddress] = false;
+  function setTierCustomers(address customerAddress,uint tier) public {
+    _level[customerAddress] = tier;
   }
 
 }
