@@ -36,7 +36,7 @@ module.exports = (deployer, network, accounts) => {
 
 		console.log("Exercice 8 : ")
 		await Exercice8(deployer,network,accounts);
-		
+
 		console.log("Exercice 9 : ")
 		await Exercice9(deployer,network,accounts);
 
