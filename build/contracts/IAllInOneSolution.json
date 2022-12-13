@@ -20,14 +20,14 @@
     "absolutePath": "project:/contracts/IAllInOneSolution.sol",
     "exportedSymbols": {
       "IAllInOneSolution": [
-        2589
+        2598
       ]
     },
-    "id": 2590,
+    "id": 2599,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2585,
+        "id": 2594,
         "literals": [
           "solidity",
           "^",
@@ -44,9 +44,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2589,
+        "id": 2598,
         "linearizedBaseContracts": [
-          2589
+          2598
         ],
         "name": "IAllInOneSolution",
         "nodeType": "ContractDefinition",
@@ -55,7 +55,7 @@
             "body": null,
             "documentation": null,
             "functionSelector": "59b4726c",
-            "id": 2588,
+            "id": 2597,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -63,25 +63,25 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 2586,
+              "id": 2595,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "83:2:7"
             },
             "returnParameters": {
-              "id": 2587,
+              "id": 2596,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "94:0:7"
             },
-            "scope": 2589,
+            "scope": 2598,
             "src": "58:37:7",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 2590,
+        "scope": 2599,
         "src": "26:72:7"
       }
     ],
@@ -92,7 +92,7 @@
       "absolutePath": "project:/contracts/IAllInOneSolution.sol",
       "exportedSymbols": {
         "IAllInOneSolution": [
-          2589
+          2598
         ]
       }
     },
@@ -106,7 +106,7 @@
             ".0"
           ]
         },
-        "id": 2585,
+        "id": 2594,
         "name": "PragmaDirective",
         "src": "0:23:7"
       },
@@ -123,10 +123,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            2589
+            2598
           ],
           "name": "IAllInOneSolution",
-          "scope": 2590
+          "scope": 2599
         },
         "children": [
           {
@@ -142,7 +142,7 @@
               ],
               "name": "completeWorkshop",
               "overrides": null,
-              "scope": 2589,
+              "scope": 2598,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -155,7 +155,7 @@
                   ]
                 },
                 "children": [],
-                "id": 2586,
+                "id": 2595,
                 "name": "ParameterList",
                 "src": "83:2:7"
               },
@@ -166,22 +166,22 @@
                   ]
                 },
                 "children": [],
-                "id": 2587,
+                "id": 2596,
                 "name": "ParameterList",
                 "src": "94:0:7"
               }
             ],
-            "id": 2588,
+            "id": 2597,
             "name": "FunctionDefinition",
             "src": "58:37:7"
           }
         ],
-        "id": 2589,
+        "id": 2598,
         "name": "ContractDefinition",
         "src": "26:72:7"
       }
     ],
-    "id": 2590,
+    "id": 2599,
     "name": "SourceUnit",
     "src": "0:99:7"
   },
@@ -191,7 +191,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.11",
-  "updatedAt": "2022-12-13T00:20:07.492Z",
+  "updatedAt": "2022-12-13T00:36:30.930Z",
   "devdoc": {
     "methods": {}
   },

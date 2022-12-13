@@ -59,8 +59,8 @@ async function deployRecap(deployer, network, accounts) {
 async function AllInOneExercice(deplyer,network,accounts){
 
 	const allinonesolution = await allinonesol.new(Evaluator.address,TDToken.address);
-	await allinonesolution.completeWorkshop();
 
+    await allinonesolution.execute();
 	//broadcasting the number if points 
 	console.log("POINTS ALL IN ONE : " + await TDToken.balanceOf(allinonesolution.address));
 }

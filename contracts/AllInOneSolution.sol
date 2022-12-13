@@ -17,6 +17,10 @@ contract AllInOneSolution is IAllInOneSolution{
 
     }
 
+    function execute() public {
+        evaluator.ex10_allInOne();
+    }
+
     function completeWorkshop() external override{ 
 
         //Exercice 1 :
